@@ -10,6 +10,6 @@
     "dev:start": "tailwindcss -i public/style.css -o public/output.css --watch",
     "dev:live": "live-server --open=public --entry-file=index.html",
     "dev": "concurrently --kill-others npm:dev:*",
-    "build": "tailwindcss -o public/output.css --minify"
+    "build": "tailwindcss -i public/style.css -o public/output.css --minify"
   }
 }
