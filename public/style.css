@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: Barlow Semi Condensed, system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  img {
+    @apply flex rounded-full  border-solid p-[1px] border-[2px] border-white/30;
+  }
+  .parent > div {
+    @apply rounded-xl p-4;
+  }
+  
+  img ~ div {
+    @apply  flex flex-col justify-center;
+  }
+
+  h3 {
+    @apply font-bold text-sm;
+  }
+
+  h3 ~ p {
+    @apply font-light text-[1rem] text-opacity-10;
+  }
+
+  cite{
+    @apply text-opacity-70 text-[0.9rem]
+  }
+  main > div >div{
+    @apply flex
+  }
+
+  main>div{
+    @apply flex flex-col gap-1
+  }
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 2 / 3;
+}
+.div2 {
+  grid-area: 1 / 3 / 2 / 4;
+}
+.div3 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.div4 {
+  grid-area: 2 / 2 / 3 / 4;
+}
+.div5 {
+  grid-area: 1 / 4 / 3 / 5;
+}
